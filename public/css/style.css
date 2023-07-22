@@ -1,0 +1,276 @@
+html,
+body,
+:root {
+  height: 100%;
+}
+
+@font-face {
+  font-family: MyFont;
+  src: url(../../assets/fonts/Roboto-Regular.ttf);
+}
+:root {
+  /* Primary */
+  --TOMATO: hsl(4, 100%, 67%);
+
+  /* Neutral */
+  --DARK-SLATE-GREY: hsl(234, 29%, 20%);
+  --GREY: hsl(231, 7%, 60%);
+  --WHITE: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: var(--DARK-SLATE-GREY);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--WHITE);
+  border-radius: 20px;
+}
+
+.inner_container {
+  display: flex;
+  max-width: 700px;
+}
+
+.left_box {
+  padding: 40px;
+  width: 60%;
+}
+
+.left_box h1 {
+  color: var(--DARK-SLATE-GREY);
+  font-size: 40px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.left_box .subtitle {
+  color: var(--GREY);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.left_box .items {
+  color: var(--GREY);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.left_box .item {
+  display: flex;
+  font-weight: 500;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+form label {
+  font-size: 14px;
+}
+
+form input {
+  border-radius: 10px;
+  border: 0.2px solid var(--GREY);
+  outline: none;
+  padding: 15px;
+}
+
+form input:focus{
+  border : .9px solid var(--DARK-SLATE-GREY)
+}
+
+button:hover {
+  background: linear-gradient(to right, #d6448d, #e8501d);
+}
+
+form button {
+  background-color: var(--DARK-SLATE-GREY);
+  border-radius: 10px;
+  border: none;
+  color: var(--WHITE);
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 15px 0;
+}
+
+.right {
+  margin: 10px 10px 10px 0; 
+  width: 45%;
+}
+
+.right .mobile-img {
+  display: none;
+}
+
+.right img {
+  width: 100%;
+}
+
+.emailLabel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.emailLabel .error {
+  color: var(--TOMATO);
+  display: none;
+}
+
+.attribution {
+  color: white;
+  font-size: 11px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(63, 67%, 54%);
+}
+
+.errorInput {
+  background-color: rgba(214, 52, 52, 0.418);
+  color: red;
+}
+
+.errorInput:focus{
+  border: 2px solid var(--TOMATO);;
+}
+
+
+
+.success_container {
+  background-color: white;
+  border-radius: 20px;
+  display: none;
+  padding: 40px;
+  width: 400px;
+}
+
+.success_inner_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.success_inner_container img {
+  margin-bottom: 20px;
+}
+
+.success_inner_container .content h1 {
+  color: var(--DARK-SLATE-GREY);
+  font-size: 50px;
+  line-height: 0.9;
+}
+
+.success_inner_container .content p {
+  color: var(--GREY);
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.success_inner_container .content p .userEmail {
+  color: var(--DARK-SLATE-GREY);
+  font-weight: bold;
+}
+
+.success_inner_container .dismiss button {
+  background-color: var(--DARK-SLATE-GREY);
+  border-radius: 10px;
+  border: none;
+  color: var(--WHITE);
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  padding: 15px 0;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  body {
+    justify-content: start;
+
+  }
+  .inner_container{
+    width: 100%;
+  }
+
+  .extra_container {
+    width: 100%;
+    height: 100%;
+  }
+  .success_container {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .success_inner_container {
+    justify-content: space-between;
+  }
+
+  .success_container .success_inner_container .content {
+    margin-top: 40px;
+  }
+  .inner_container {
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    width: 100%;
+  }
+  .right .desktop-img {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+  }
+  .left_box {
+    width: 100%;
+  }
+
+  .right .mobile-img {
+    border-radius: 10px;
+    display: block;
+    margin-top: -20px;
+    overflow: hidden;
+  }
+
+  .extra_footer{
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .left_box h1 {
+    font-size: 30px;
+  }
+
+  .left_box {
+    padding: 20px;
+  }
+
+  .left_box .subtitle {
+    font-size: 14px;
+  }
+}
