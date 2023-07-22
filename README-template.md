@@ -47,7 +47,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/Manish-456/newsletter-sigup-form)
-- Live Site URL: [Add live site URL here](https:/newsletter-signup-form.netlify.com)
+- Live Site URL: [Add live site URL here](https:/newsletter-signup-form-fly.netlify.com)
 
 ## My process
 
